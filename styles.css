@@ -26,11 +26,15 @@ body {
   margin-top: 80px;
 }
 
-.button-wrapper {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 390px;
   height: 360px;
   margin-top: 70px;
   border: 2px solid blue;
+}
+
+.grid-cell {
+  border: 2px solid gray;
 }

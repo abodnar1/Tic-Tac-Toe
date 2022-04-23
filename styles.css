@@ -12,17 +12,17 @@ body {
   border: 2px solid green;
 }
 
-.player1-header,
-.player2-header,
-.player1-win-counter,
-.player2-win-counter,
-.player-turn-tracker {
+.playerX-header,
+.playerO-header,
+.playerX-win-counter,
+.playerO-win-counter,
+.display-player {
   text-align: center;
   font-size: 40px;
   border: 2px solid magenta;
 }
 
-.player-turn-tracker {
+.display-player {
   margin-top: 80px;
 }
 

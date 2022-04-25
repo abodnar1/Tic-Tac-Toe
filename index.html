@@ -9,30 +9,27 @@
 </head>
 <body>
   <section class="left-scoreboard">
-    <h1 class="playerX-header">Player 1</h1>
-    <p class ="playerX-win-counter"># Wins</p>
+    <h1 class="player1-header">🛼</h1>
+    <p class ="player1-win-counter">0 Wins</p>
   </section>
-
   <main class="game-board">
-    <section class="display-player">
-      <p>It's player <span class="display-player playerX">X</span>'s turn!</p>
+    <section class="display-announcements">It's 🛼 turn!
     </section>
     <section class="grid-container">
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
-      <div class="grid-cell"></div>
+      <div class="grid-cell" id="a1"></div>
+      <div class="grid-cell" id="b1"></div>
+      <div class="grid-cell" id="c1"></div>
+      <div class="grid-cell" id="a2"></div>
+      <div class="grid-cell" id="b2"></div>
+      <div class="grid-cell" id="c2"></div>
+      <div class="grid-cell" id="a3"></div>
+      <div class="grid-cell" id="b3"></div>
+      <div class="grid-cell" id="c3"></div>
     </section>
-
   </main>
   <section class="right-scoreboard">
-    <h3 class="playerO-header">Player 2</h3>
-    <p class ="playerO-win-counter"># Wins</p>
+    <h3 class="player2-header">🪩</h3>
+    <p class ="player2-win-counter">0 Wins</p>
   </section>
   <script src="./src/player.js"></script>
   <script src="./src/game.js"></script>

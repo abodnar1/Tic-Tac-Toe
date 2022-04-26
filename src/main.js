@@ -16,11 +16,14 @@ function renderToken(event) {
   var square = event.target;
 
   if (square.classList.contains("disabled")) {
-    event.stopImmediatePropagation();
+    event.preventDefault();
   } else {
     square.innerText = game.currentPlayer.token;
     game.disableSquare(square);
     game.updateBoardToken(squareId);
+    game.checkForHorizontalWin()
+    game.checkForVerticalWin();
+    game.checkForDiagonalWin();
     game.switchPlayerTurn();
     announcePlayerTurn();
   }
@@ -30,7 +33,17 @@ function announcePlayerTurn() {
   display.innerText = `It's ${game.currentPlayer.token}'s turn!`
 };
 
-/*~~~~~~Still need: announce winner~~~~~*/
-/*~~~~~~Still need: announce draw~~~~~~~*/
-/*~~Still need: update player win counters~~~*/
-/*~~~~~~Still need: reset board~~~~~~~*/
+function announceWinner() {
+  display.innerText = `${game.currentPlayer.token} wins!`
+};
+
+function resetBoard() {
+  // can querySelector all on the square class and remove disabled
+  // it will return the whole array and you would reassign the tokens to ""
+}
+
+/*~~~~~~still need: announce winner~~~~~*/
+/*~~~~~~still need: announce draw~~~~~~~*/
+/*~~~~~~still need: update display win counters~~~~~*/
+/*~~~~~~still need: reset board~~~~~~~*/
+/*~~~~~~still need: timeout ~~~~~~~*/

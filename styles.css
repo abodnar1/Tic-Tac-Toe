@@ -32,7 +32,7 @@ body {
   margin-top: 100px;
 }
 
-.grid-container {
+.board-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 400px;
@@ -40,7 +40,7 @@ body {
   margin-top: 50px;
 }
 
-.grid-cell {
+.square {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,4 +58,8 @@ body {
 .horizontal {
   border-top: 6px solid maroon;
   border-bottom: 6px solid maroon;
+}
+
+.disabled {
+  cursor: not-allowed;
 }

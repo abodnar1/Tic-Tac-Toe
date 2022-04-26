@@ -18,32 +18,39 @@ function renderToken(event) {
   if (square.classList.contains("disabled")) {
     event.preventDefault();
   } else {
+    game.updateBoardToken(squareId);
     square.innerText = game.currentPlayer.token;
     game.disableSquare(square);
-    game.updateBoardToken(squareId);
-    game.checkForHorizontalWin()
-    game.checkForVerticalWin();
-    game.checkForDiagonalWin();
+    checkWinStatus();
+    handleOutcome();
     game.switchPlayerTurn();
     announcePlayerTurn();
   }
 };
 
 function announcePlayerTurn() {
-  display.innerText = `It's ${game.currentPlayer.token}'s turn!`
+  if (game.win === false) {
+    display.innerText = `It's ${game.currentPlayer.token}'s turn!`
+  }
 };
 
-function announceWinner() {
-  display.innerText = `${game.currentPlayer.token} wins!`
+function checkWinStatus() {
+  game.checkForHorizontalWin();
+  game.checkForVerticalWin();
+  game.checkForDiagonalWin();
+
+  if (game.win === false) {
+    game.checkForDraw();
+  }
 };
 
-function resetBoard() {
-  // can querySelector all on the square class and remove disabled
-  // it will return the whole array and you would reassign the tokens to ""
-}
+function handleOutcome() {
+  if (game.win === true) {
+    display.innerText = `${game.currentPlayer.token} wins!`
+  } else if (game.win === null) {
+    display.innerText = `It's a cat's game!`
+  }
+};
 
-/*~~~~~~still need: announce winner~~~~~*/
-/*~~~~~~still need: announce draw~~~~~~~*/
 /*~~~~~~still need: update display win counters~~~~~*/
-/*~~~~~~still need: reset board~~~~~~~*/
-/*~~~~~~still need: timeout ~~~~~~~*/
+/*~~~~~~still need: reset board/timeout~~~~~~~*/

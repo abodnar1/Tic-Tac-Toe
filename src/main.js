@@ -1,10 +1,11 @@
 /*~~~~~~~~Query Selectors~~~~~~~~*/
 var gameBoard = document.querySelector(".board-container");
+var squares = document.querySelectorAll("div.square");
+var display = document.querySelector(".display-announcements");
 var player1WinCounter = document.querySelector(".player1-win-counter");
 var player2WinCounter = document.querySelector(".player2-win-counter");
-var display = document.querySelector(".display-announcements");
 
-/*~~~~~~~~Global Variables~~~~~~~~*/
+/*~~~~~~~~Global Variables~~~~~~~*/
 var game = new Game();
 
 /*~~~~~~~~Event Listeners~~~~~~~~*/
@@ -20,18 +21,14 @@ function renderToken(event) {
   } else {
     game.updateBoardToken(squareId);
     square.innerText = game.currentPlayer.token;
-    game.disableSquare(square);
+    disableSquare(square);
     checkWinStatus();
     handleOutcome();
-    game.switchPlayerTurn();
-    announcePlayerTurn();
   }
 };
 
-function announcePlayerTurn() {
-  if (game.win === false) {
-    display.innerText = `It's ${game.currentPlayer.token}'s turn!`
-  }
+function disableSquare(square) {
+  square.classList.add("disabled");
 };
 
 function checkWinStatus() {
@@ -46,11 +43,39 @@ function checkWinStatus() {
 
 function handleOutcome() {
   if (game.win === true) {
-    display.innerText = `${game.currentPlayer.token} wins!`
+    displayWin();
   } else if (game.win === null) {
-    display.innerText = `It's a cat's game!`
+    displayDraw();
+  } else {
+    game.switchPlayerTurn();
+    announcePlayerTurn();
   }
 };
 
-/*~~~~~~still need: update display win counters~~~~~*/
-/*~~~~~~still need: reset board/timeout~~~~~~~*/
+function announcePlayerTurn() {
+  if (game.win === false) {
+    display.innerText = `It's ${game.currentPlayer.token}'s turn!`
+  }
+};
+
+function clearTokens() {
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].innerText = "";
+    squares[i].classList.remove("disabled")
+  }
+  announcePlayerTurn();
+};
+
+function displayWin() {
+  display.innerText = `${game.currentPlayer.token} wins!`
+  game.handleWin();
+  player1WinCounter.innerText = `${game.player1.wins} Wins`
+  player2WinCounter.innerText = `${game.player2.wins} Wins`
+  setTimeout(clearTokens, 3000);
+};
+
+function displayDraw() {
+  display.innerText = `It's a cat's game!`
+  game.handleDraw();
+  setTimeout(clearTokens, 3000)
+};

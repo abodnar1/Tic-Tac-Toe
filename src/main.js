@@ -1,5 +1,5 @@
-// /*~~~~~~~~Query Selectors~~~~~~~~*/
-var userClick = document.querySelector(".grid-container");
+/*~~~~~~~~Query Selectors~~~~~~~~*/
+var gameBoard = document.querySelector(".board-container");
 var player1WinCounter = document.querySelector(".player1-win-counter");
 var player2WinCounter = document.querySelector(".player2-win-counter");
 var display = document.querySelector(".display-announcements");
@@ -8,20 +8,29 @@ var display = document.querySelector(".display-announcements");
 var game = new Game();
 
 /*~~~~~~~~Event Listeners~~~~~~~~*/
-userClick.addEventListener("click", renderToken);
+gameBoard.addEventListener("click", renderToken);
 
 /*~~~~~~~~Functions & Event Handlers~~~~~~~~*/
-function renderToken() {
-  if (game.currentPlayer.turn === game.player1.turn) {
-    event.target.innerText = game.player1.token;
-  } else {
-    event.target.innerText = game.player2.token;
-  };
+function renderToken(event) {
+  var squareId = event.target.id;
+  var square = event.target;
 
-  game.switchPlayerTurn();
-  // need to disable clickability of the div after clicked once...how?
+  if (square.classList.contains("disabled")) {
+    event.stopImmediatePropagation();
+  } else {
+    square.innerText = game.currentPlayer.token;
+    game.disableSquare(square);
+    game.updateBoardToken(squareId);
+    game.switchPlayerTurn();
+    announcePlayerTurn();
+  }
 };
 
-// function disableGridCell() {
-//   event.preventDefault();
-// }
+function announcePlayerTurn() {
+  display.innerText = `It's ${game.currentPlayer.token}'s turn!`
+};
+
+/*~~~~~~Still need: announce winner~~~~~*/
+/*~~~~~~Still need: announce draw~~~~~~~*/
+/*~~Still need: update player win counters~~~*/
+/*~~~~~~Still need: reset board~~~~~~~*/

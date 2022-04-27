@@ -4,6 +4,7 @@
 - [Project Overview](#project-overview)
 - [Technologies and Tools](#technologies-and-tools)
 - [Roadmap](#roadmap)
+- [Deployed Link](#deployed-link)
 - [Setup](#setup)
 - [Sources](#sources)
 - [Contributors](#contributors)
@@ -32,6 +33,9 @@ Future features could include:
 * Add more styling to complete my 70s vision as seen below:
 
 ![Screen Shot 2022-04-26 at 7 50 51 PM Small](https://user-images.githubusercontent.com/99693359/165412303-7e176366-4f14-47e5-bc7a-56c4c4a9664f.jpeg)
+
+## Deployed Page
+You can access the game at the deployed page [here](https://abodnar1.github.io/Tic-Tac-Toe/).
 
 ## Setup
 1. Fork this Repo

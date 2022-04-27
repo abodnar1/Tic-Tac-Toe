@@ -4,7 +4,7 @@
 - [Project Overview](#project-overview)
 - [Technologies and Tools](#technologies-and-tools)
 - [Roadmap](#roadmap)
-- [Deployed Link](#deployed-link)
+- [Deployed Page](#deployed-page)
 - [Setup](#setup)
 - [Sources](#sources)
 - [Contributors](#contributors)
@@ -14,7 +14,7 @@ This app is designed for two people to play the classic game of Tic-Tac-Toe on a
 
 <img width="1429" alt="tic-tac-toe final project" src="https://user-images.githubusercontent.com/99693359/165407515-04322670-5716-4632-b914-e71339109f6a.png">
 
-The Turing School of Software & Design provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html).
+The [Turing School of Software and Design](https://turing.edu/) provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html).
 
 ## Technologies and Tools
 * HTML

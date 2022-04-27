@@ -9,7 +9,7 @@
 - [Contributors](#contributors)
 
 ## Project Overview
-This app is designed for two people to play the classic game of Tic-Tac-Toe on a laptop or desktop computer. The design was inspired by my love for skating, dancing, and 70s disco! The roller skate goes first and can make their move on the square of their choosing. Once their square is marked, the game will switch turns and the disco ball will get a chance to make their move. Once a player gets 3 of their tokens in a row, the game will announce that they are the winner and their win will be displayed on their respective scoreboard. If you have a cat's game, no one will get points. In either instance, the game will restart itself and whoever didn't get to go first in the previous game will get to go first in the next game. Enjoy!
+This app is designed for two people to play the classic game of Tic-Tac-Toe on a laptop or desktop computer. The design was inspired by my love for skating, dancing, and 70s disco! The roller skate goes first and can make their move on the square of their choosing. Once their square is marked, the game will switch turns and the disco ball will get a chance to make their move. Once a player gets 3 of their tokens in a row, the game will announce that they are the winner and their win will be displayed on their respective scoreboard. If you have a cat's game, no one will get points. In either instance, the game will restart itself and whoever didn't go first in the previous game will go first in the next game. Enjoy!
 
 The Turing School of Software & Design provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html).
 

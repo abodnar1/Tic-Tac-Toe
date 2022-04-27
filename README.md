@@ -37,8 +37,7 @@ Future features could include:
 * A click sound for when a player makes their mark
 * Add more styling to complete my 70s vision as seen below:
 
-![Screen Shot 2022-04-26 at 7 50 51 PM](https://user-images.githubusercontent.com/99693359/165410811-490a2421-8de5-4ed2-871d-8679c61c82f7.png)
-
+![Screen Shot 2022-04-26 at 7 50 51 PM Small](https://user-images.githubusercontent.com/99693359/165412303-7e176366-4f14-47e5-bc7a-56c4c4a9664f.jpeg)
 
 ## Sources
 * [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties)

@@ -63,7 +63,7 @@ class Game {
   };
 
   checkForDiagonalWin() {
-    if (this.board[0].token === this.currentPlayer.token && this.board[0].token === this.currentPlayer.token && this.board[8].token === this.currentPlayer.token ||
+    if (this.board[0].token === this.currentPlayer.token && this.board[4].token === this.currentPlayer.token && this.board[8].token === this.currentPlayer.token ||
     this.board[2].token === this.currentPlayer.token && this.board[4].token === this.currentPlayer.token && this.board[6].token === this.currentPlayer.token) {
       this.win = true;
     }
